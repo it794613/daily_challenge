@@ -131,21 +131,24 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2Z-3V-PgG" userLabel="headLabel">
-                                                    <rect key="frame" x="66" y="7.9999999999999982" width="282" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="66" y="8" width="282" height="14.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kk-fL-a6z" userLabel="footerLabel">
-                                                    <rect key="frame" x="66" y="52" width="282" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="66" y="58.666666666666664" width="282" height="14.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KF-Ge-IUf" userLabel="detailLabel">
-                                                    <rect key="frame" x="66" y="33.333333333333336" width="262" height="13.666666666666664"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="66" y="27.333333333333336" width="262" height="26.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="264" id="kgC-lL-Dhr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41960784309999999" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -195,8 +198,9 @@
                             <constraint firstItem="ulX-ey-ntX" firstAttribute="leading" secondItem="US6-bS-yp9" secondAttribute="trailing" id="rzk-IP-svf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="알림" id="TmU-WV-zY2"/>
+                    <navigationItem key="navigationItem" title="알림" style="editor" id="TmU-WV-zY2"/>
                     <connections>
+                        <outlet property="labelForSeting" destination="US6-bS-yp9" id="HrV-tL-7EL"/>
                         <outlet property="pickerView" destination="tMA-Yj-1Bc" id="o11-uJ-LuZ"/>
                         <outlet property="tableView" destination="IAO-A2-5KL" id="FOW-CV-S4s"/>
                     </connections>

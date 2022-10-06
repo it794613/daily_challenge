@@ -21,6 +21,7 @@
 		0D33A6DF28E6FE0D00F1517C /* alarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33A6DE28E6FE0D00F1517C /* alarmViewController.swift */; };
 		0D33A6E328E6FE4800F1517C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33A6E228E6FE4800F1517C /* Model.swift */; };
 		0D33A6E528E85F4B00F1517C /* myTableCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33A6E428E85F4B00F1517C /* myTableCellController.swift */; };
+		0D7B5F2428EE9BD200ABF219 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B5F2328EE9BD100ABF219 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		0D33A6DE28E6FE0D00F1517C /* alarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmViewController.swift; sourceTree = "<group>"; };
 		0D33A6E228E6FE4800F1517C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0D33A6E428E85F4B00F1517C /* myTableCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTableCellController.swift; sourceTree = "<group>"; };
+		0D7B5F2328EE9BD100ABF219 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +155,6 @@
 				0D33A6DE28E6FE0D00F1517C /* alarmViewController.swift */,
 				0D33A6A428E6BA5300F1517C /* MainViewController.swift */,
 				0D33A6E428E85F4B00F1517C /* myTableCellController.swift */,
-				0D33A6D928E6FA5100F1517C /* CustomView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -162,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				0D33A6E228E6FE4800F1517C /* Model.swift */,
+				0D33A6D928E6FA5100F1517C /* CustomView.swift */,
+				0D7B5F2328EE9BD100ABF219 /* CustomButton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D33A6E528E85F4B00F1517C /* myTableCellController.swift in Sources */,
+				0D7B5F2428EE9BD200ABF219 /* CustomButton.swift in Sources */,
 				0D33A6DF28E6FE0D00F1517C /* alarmViewController.swift in Sources */,
 				0D33A6A528E6BA5300F1517C /* MainViewController.swift in Sources */,
 				0D33A6AB28E6BA5300F1517C /* daily_challenge.xcdatamodeld in Sources */,

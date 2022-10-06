@@ -12,15 +12,21 @@ class alarmViewController : UIViewController{
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     
+    @IBOutlet weak var labelForSeting: UILabel!
     
     
-    var pickerViewIsHidden : Bool = false
+ 
+    
+    
+    var floatingButton = CustomButton()
+    
+    static var pickerViewIsHidden : Bool = true
     
     let pickerData : [String] = ["전체", "핫딜", "프로필", "디테일"]
     
     let models : [Model] = [
-        Model(type : "detail" ,text1: "hi", text2: "hellow", text3: "what's up"),
-        Model(type : "hotdeal" , text1: "1", text2: "2", text3: "3"),
+        Model(type : "detail", text1: "hi", text2: "hellow", text3: "what's up"),
+        Model(type : "hotdeal", text1: "1", text2: "2", text3: "3"),
         Model(type: "profile", text1: "1", text2: "2", text3: "3")
     ]
     
@@ -33,17 +39,52 @@ class alarmViewController : UIViewController{
         pickerView.dataSource = self
         pickerView.isHidden = true
         
+        //MARK: -toolbar 만들기
+//        let doneButton = UIBarButtonItem()
+//         doneButton.title = "완료"
+//         doneButton.target = self
+//         doneButton.action = #selector(pickerDone)
+//
+//        let toolbar = UIToolbar()
+//        toolbar.frame = CGRect(x: 0, y: 0, width: 0, height: 44)
+//        toolbar.backgroundColor = UIColor(red: 192, green: 192, blue: 192, alpha: 1)
+//        toolbar.tintColor = .systemBlue
+//        toolbar.setItems([doneButton], animated: true)
+//
+//        pickerView.inputAccessoryView = toolbar
+        
+        // tool바 적용 안됨.
+        
+
+        
+        
+        
+        view.addSubview(floatingButton)
+        floatingButton.translatesAutoresizingMaskIntoConstraints = false
+        floatingButton.layer.masksToBounds = true
+        NSLayoutConstraint.activate([
+            floatingButton.widthAnchor.constraint(equalToConstant: 44),
+            floatingButton.heightAnchor.constraint(equalToConstant: 44),
+            floatingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -77),
+            floatingButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+        ])
+        view.bringSubviewToFront(floatingButton)
+        
+        // 문제 floating button 이 위로 안올라옴.
+        
+        
 
     }
     
+//    @objc func pickerDone(){
+//        pickerView.endEditing(true)
+//
+//    }
+    
+    
     @IBAction func showPickerView(_ sender: Any) {
-        pickerViewIsHidden.toggle()
-        if pickerViewIsHidden == true {
-            pickerView.isHidden = false
-        }
-        else{
-            pickerView.isHidden = true
-        }
+        alarmViewController.pickerViewIsHidden.toggle()
+        pickerView.isHidden = alarmViewController.pickerViewIsHidden
     }
     
     
@@ -90,8 +131,13 @@ extension alarmViewController : UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // 선택되면, cell 에 데이터 타입에서 해당 픽과 동일한 정보만 정렬해서 리로드 하고
-        // endediting true 하기
+        
+        let textforSetting = self.pickerData[row]
+        labelForSeting.text = textforSetting
+        
+        pickerView.endEditing(true)
+        alarmViewController.pickerViewIsHidden.toggle()
+        pickerView.isHidden = alarmViewController.pickerViewIsHidden
     }
     
     
