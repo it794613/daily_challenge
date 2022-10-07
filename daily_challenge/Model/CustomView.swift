@@ -16,6 +16,7 @@ class CustomView: UIView {
             self.layer.cornerRadius = cornerRadius
         }
     }
+    @IBInspectable
     var isCircle: Bool = false {
         didSet {
             if isSquare() && isCircle {
@@ -29,5 +30,24 @@ class CustomView: UIView {
     fileprivate func isSquare() -> Bool {
         return self.frame.width == self.frame.height
     }
+    
+    @IBInspectable
+    var borderWidth: CGFloat = 0{
+        didSet{
+            self.layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable
+    var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: self.layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
+    
+    
     
 }

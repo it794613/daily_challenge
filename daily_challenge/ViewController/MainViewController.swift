@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.shadowImage = UIImage(named: "shadow")
+        self.navigationController?.navigationBar.shadowImage = nil
         
         
     }
