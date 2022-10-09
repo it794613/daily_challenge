@@ -10,8 +10,11 @@ import UIKit
 
 class DetailCell : UITableViewCell{
     
+    @IBOutlet weak var detailLabel: UILabel!
     
+    @IBOutlet weak var headerLabel: UILabel!
     
+    @IBOutlet weak var footerLabel: UILabel!
     
     
     override func layoutSubviews() {
