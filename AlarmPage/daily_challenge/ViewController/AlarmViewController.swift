@@ -7,6 +7,13 @@
 
 import UIKit
 
+#warning("TODO : - ")
+// 1. 전체 클릭 -> 피커뷰 나옴
+// 2. 툴바에 확인 클릭 -> 카테고리 선택됨
+// 3. 선택된 카테고리 라벨 변경
+// 4. 테이블 뷰를 리로드 해서 해당 카테고리 리스트만 보여주기
+// 4-1. 선택된 카테고리에 해당하는 데이터로 변경
+
 class AlarmViewController : UIViewController{
     
     @IBOutlet var tableView: UITableView!
@@ -20,27 +27,31 @@ class AlarmViewController : UIViewController{
  
     @IBOutlet weak var alarmNumber: UILabel!
     
-    
-    //    var floatingButton = CustomButton()
+    // 임시 선택된 카테고리
+    var tempSelectedCategory : Model.Category = .all
     
     var pickerViewIsHidden : Bool = true
     
-    let pickerData : [String] = ["전체", "핫딜", "프로필", "디테일"]
+//    let pickerData : [String] = ["전체", "핫딜", "프로필", "디테일"]
+    let pickerData : [Model.Category] = Model.Category.allCases
     
     let models : [Model] = [
-        Model(type : "detail", text1: "hi", text2: "hellow", text3: "what's up"),
-        Model(type : "hotdeal", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3"),
-        Model(type: "profile", text1: "1", text2: "2", text3: "3")
+        Model(type: .detail, text1: "hi", text2: "hellow", text3: "what's up"),
+        Model(type: .hotdeal, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3"),
+        Model(type: .profile, text1: "1", text2: "2", text3: "3")
     ]
+    
+    // 임시 배열
+    var tempList : [Model] = []
     
     
     override func viewDidLoad() {
@@ -55,9 +66,7 @@ class AlarmViewController : UIViewController{
         alarmNumber.text = "\(models.count)개의 알림"
         self.navigationController?.navigationBar.shadowImage = nil
         
-
-        
-        
+        self.tempList = self.models
         
 //        view.addSubview(floatingButton)
 //        floatingButton.translatesAutoresizingMaskIntoConstraints = false
@@ -81,11 +90,28 @@ class AlarmViewController : UIViewController{
 //
 //    }
     
+    
+    
+    // 선택된 카테고리에 대한 부분
     @IBAction func pickDone(_ sender: UIButton) {
         pickerViewIsHidden.toggle()
         pickView.isHidden = pickerViewIsHidden
         pickerView.isHidden = pickerViewIsHidden
-        labelForSeting.text = self.textForSet
+//        labelForSeting.text = self.textForSet
+        
+        
+        self.selectedCategory = self.tempSelectedCategory
+        
+        
+        labelForSeting.text = self.selectedCategory.title
+        
+        #warning("TODO : - 선택된 카테고리로 테이블뷰 - 데이터소스에 연결되어 있는 리스트를 변경")
+        self.tempList = self.models.filter{ selectedCategory == .all || $0.type == selectedCategory }
+        alarmNumber.text = "\(tempList.count)개의 알림"
+        
+        tableView.reloadData()
+        
+        
     }
     
     @IBAction func showPickerView(_ sender: Any) {
@@ -108,23 +134,25 @@ class AlarmViewController : UIViewController{
 //MARK: - UIdatasource
 extension AlarmViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+//        return models.count
+        return tempList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let findIdentifier = models[indexPath.row].type
+        let findIdentifier = tempList[indexPath.row].type
         switch findIdentifier {
-        case "profile":
+        case .profile:
             let cell = tableView.dequeueReusableCell(withIdentifier: "profile") as! ProfileCell
             return cell
-        case "hotdeal":
+        case .hotdeal:
             let cell = tableView.dequeueReusableCell(withIdentifier: "hotdeal") as! HotdealCell
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "detail") as! DetailCell
             return cell
         }
+        
     }
     
 
@@ -147,19 +175,16 @@ extension AlarmViewController : UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return Model.Category.allCases.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return self.pickerData[row].title
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.textForSet = pickerData[row].title
         
-        self.textForSet = pickerData[row]
+        self.tempSelectedCategory = pickerData[row]
     }
-    
-    
-    
-    
 }

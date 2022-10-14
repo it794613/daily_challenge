@@ -169,11 +169,6 @@
                                                 <constraint firstItem="6KF-Ge-IUf" firstAttribute="top" secondItem="a2Z-3V-PgG" secondAttribute="bottom" constant="5" id="spk-qK-wNU"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="detailLabel" destination="6KF-Ge-IUf" id="E9I-hR-ZUy"/>
-                                            <outlet property="footerLabel" destination="9Kk-fL-a6z" id="LlH-aC-wzN"/>
-                                            <outlet property="headerLabel" destination="a2Z-3V-PgG" id="XUl-PK-Iax"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hotdeal" rowHeight="81" id="ipd-fw-KC9" customClass="HotdealCell" customModule="daily_challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="131" width="393" height="81"/>
