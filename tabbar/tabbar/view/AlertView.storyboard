@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RK-mm-suK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RK-mm-suK">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pck-se-3GZ" customClass="CustomView" customModule="tabbar" customModuleProvider="target">
@@ -46,6 +46,9 @@
                                                     </attributedString>
                                                     <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="pressCancelButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PMd-PH-yvZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaj-Zq-h35">
                                                 <rect key="frame" x="122" y="86" width="94" height="34"/>
@@ -83,7 +86,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="pck-se-3GZ" firstAttribute="centerY" secondItem="2RK-mm-suK" secondAttribute="centerY" id="Tp7-iq-Ukt"/>
                                     <constraint firstItem="pck-se-3GZ" firstAttribute="centerX" secondItem="2RK-mm-suK" secondAttribute="centerX" id="VUd-fB-bcf"/>
@@ -91,6 +93,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.30317283163265307" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2RK-mm-suK" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="IvD-KZ-enc"/>
                             <constraint firstItem="2RK-mm-suK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="K6y-D6-weR"/>

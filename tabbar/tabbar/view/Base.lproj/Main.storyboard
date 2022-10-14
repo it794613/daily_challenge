@@ -28,11 +28,27 @@
                                     <navigationItem title="홈" id="Hg3-Mj-kTi"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9La-3k-0MR" customClass="CustomView" customModule="tabbar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="737" width="390" height="107"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="LaN-Dl-0mc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="addShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9La-3k-0MR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cio-MJ-CDl"/>
                             <constraint firstItem="4Ff-qH-DXM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kwy-w5-5X6"/>
+                            <constraint firstAttribute="bottom" secondItem="9La-3k-0MR" secondAttribute="bottom" id="P06-rW-QwV"/>
+                            <constraint firstItem="9La-3k-0MR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VA6-FJ-Cow"/>
                             <constraint firstItem="4Ff-qH-DXM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dw4-OI-14F"/>
                             <constraint firstItem="4Ff-qH-DXM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="47" id="kdU-Ub-GlH"/>
                         </constraints>
@@ -41,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1311" y="-118"/>
+            <point key="canvasLocation" x="-1408" y="-118"/>
         </scene>
         <!--주문-->
         <scene sceneID="gHI-dg-viL">
@@ -52,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egw-tL-65m">
-                                <rect key="frame" x="0.0" y="36" width="390" height="64"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="VGk-bX-fVa"/>
                                 </constraints>
@@ -63,13 +79,30 @@
                                     <navigationItem title="주문" id="id6-1Q-iun"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-l0-F4g" customClass="CustomView" customModule="tabbar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="737" width="390" height="107"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="i05-w9-5Sj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="addShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gb5-7e-zUX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Egw-tL-65m" firstAttribute="leading" secondItem="gb5-7e-zUX" secondAttribute="leading" id="75O-N9-sht"/>
                             <constraint firstItem="Egw-tL-65m" firstAttribute="trailing" secondItem="gb5-7e-zUX" secondAttribute="trailing" id="FzG-WB-7j3"/>
-                            <constraint firstItem="Egw-tL-65m" firstAttribute="top" secondItem="9A6-g2-5qY" secondAttribute="top" constant="36" id="Zhz-yg-hAA"/>
+                            <constraint firstItem="hJD-l0-F4g" firstAttribute="trailing" secondItem="gb5-7e-zUX" secondAttribute="trailing" id="HRy-ff-fZZ"/>
+                            <constraint firstItem="hJD-l0-F4g" firstAttribute="leading" secondItem="gb5-7e-zUX" secondAttribute="leading" id="Ugk-GA-lTh"/>
+                            <constraint firstItem="Egw-tL-65m" firstAttribute="top" secondItem="9A6-g2-5qY" secondAttribute="top" constant="47" id="Zhz-yg-hAA"/>
+                            <constraint firstAttribute="bottom" secondItem="hJD-l0-F4g" secondAttribute="bottom" id="wLb-Rt-Yy2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hJD-l0-F4g" secondAttribute="bottom" constant="-83" id="yOj-de-9XR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="주문" image="briefcase-24" id="Gx2-s7-ReG" userLabel="order"/>
@@ -99,12 +132,28 @@
                                     <navigationItem title="즐겨찾기" id="Pqk-aU-fKq"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWb-4E-nFC" customClass="CustomView" customModule="tabbar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="737" width="390" height="107"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="fR5-Pe-phT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="addShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LTu-69-osF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pWb-4E-nFC" secondAttribute="bottom" id="2WP-hG-lCM"/>
+                            <constraint firstAttribute="trailing" secondItem="pWb-4E-nFC" secondAttribute="trailing" id="C3e-Qm-bfL"/>
                             <constraint firstItem="6QB-hE-im0" firstAttribute="trailing" secondItem="LTu-69-osF" secondAttribute="trailing" id="lB3-Wn-TF0"/>
                             <constraint firstItem="6QB-hE-im0" firstAttribute="top" secondItem="6Ra-5a-mPK" secondAttribute="top" constant="47" id="osM-0v-sQr"/>
+                            <constraint firstItem="pWb-4E-nFC" firstAttribute="leading" secondItem="LTu-69-osF" secondAttribute="leading" id="sB5-Im-Rwq"/>
                             <constraint firstItem="6QB-hE-im0" firstAttribute="leading" secondItem="LTu-69-osF" secondAttribute="leading" id="tYI-Ak-BVE"/>
                         </constraints>
                     </view>
@@ -122,11 +171,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bo8-zr-Qb2">
-                                <rect key="frame" x="75" y="300" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                            </view>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3Z-Di-L8l">
                                 <rect key="frame" x="0.0" y="47" width="390" height="64"/>
                                 <constraints>
@@ -139,12 +183,28 @@
                                     <navigationItem title="프로필" id="cHk-eC-d0O"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjX-lM-6mC" customClass="CustomView" customModule="tabbar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="737" width="390" height="107"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="m7F-7z-Xip"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="addShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ldm-vT-SWm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xjX-lM-6mC" firstAttribute="trailing" secondItem="ldm-vT-SWm" secondAttribute="trailing" id="9bv-9z-s0I"/>
                             <constraint firstItem="h3Z-Di-L8l" firstAttribute="top" secondItem="job-F6-6jO" secondAttribute="top" constant="47" id="Ovo-K9-xe5"/>
                             <constraint firstItem="h3Z-Di-L8l" firstAttribute="leading" secondItem="ldm-vT-SWm" secondAttribute="leading" id="P57-t0-Fgc"/>
+                            <constraint firstAttribute="bottom" secondItem="xjX-lM-6mC" secondAttribute="bottom" id="XXg-IX-EDU"/>
+                            <constraint firstItem="xjX-lM-6mC" firstAttribute="leading" secondItem="ldm-vT-SWm" secondAttribute="leading" id="p9x-eD-W11"/>
                             <constraint firstItem="h3Z-Di-L8l" firstAttribute="trailing" secondItem="ldm-vT-SWm" secondAttribute="trailing" id="pYs-4H-NXE"/>
                         </constraints>
                     </view>
@@ -174,13 +234,29 @@
                                     <navigationItem title="쪽지" id="C9e-fd-gHV"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYh-40-vZt" customClass="CustomView" customModule="tabbar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="737" width="390" height="107"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="2AT-4r-Wor"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="addShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vqc-DB-Pwo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WTc-sX-oyk" firstAttribute="leading" secondItem="vqc-DB-Pwo" secondAttribute="leading" id="At7-8h-edH"/>
+                            <constraint firstAttribute="bottom" secondItem="BYh-40-vZt" secondAttribute="bottom" id="BHV-Fh-6dh"/>
                             <constraint firstItem="WTc-sX-oyk" firstAttribute="trailing" secondItem="vqc-DB-Pwo" secondAttribute="trailing" id="BK7-4B-3v0"/>
+                            <constraint firstItem="BYh-40-vZt" firstAttribute="trailing" secondItem="vqc-DB-Pwo" secondAttribute="trailing" id="Npb-ZQ-UAp"/>
                             <constraint firstItem="WTc-sX-oyk" firstAttribute="top" secondItem="U9F-vi-cxM" secondAttribute="top" constant="47" id="WTm-GI-evH"/>
+                            <constraint firstItem="BYh-40-vZt" firstAttribute="leading" secondItem="vqc-DB-Pwo" secondAttribute="leading" id="wPi-RH-ekU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="쪽지" image="no-comment" id="XUI-oT-JW1"/>
@@ -225,9 +301,6 @@
         <image name="person-24" width="25" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

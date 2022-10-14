@@ -11,8 +11,7 @@ import UIKit
 
 
 #warning("Todo ")
-// 2. 커스텀 탭바 에서 cornerRadius주고, shadow 주기.
-// 3. 알람뷰에서 전체 opacity 들어갔는데 이거 문제있음. 고쳐야함.
+// 1.
 
 
 class TabBarController: UITabBarController {
@@ -27,11 +26,11 @@ class TabBarController: UITabBarController {
         
         var title: String{
             switch self{
-            case .Home: return "home"
-            case .Order: return "order"
-            case .Like: return "like"
-            case .Comment: return "comment"
-            case .Profile: return "profile"
+            case .Home: return "홈"
+            case .Order: return "주문"
+            case .Like: return "즐겨찾기"
+            case .Comment: return "메세지"
+            case .Profile: return "프로필"
             }
         }
     }
@@ -45,17 +44,19 @@ class TabBarController: UITabBarController {
         self.present(alertView, animated: true)
     }
     
-    
+
     
 }
 
 extension TabBarController: UITabBarControllerDelegate{
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item.title == TabBarItem.Home.title{
-            
-        }
-        else{
-            showAlertView()
+        if let itemTitle = item.title{
+            if itemTitle == TabBarItem.Home.title{
+                print("")
+            }
+            else{
+                showAlertView()
+            }
         }
     }
 }

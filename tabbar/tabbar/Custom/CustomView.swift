@@ -17,4 +17,15 @@ class CustomView: UIView{
         }
     }
     
+    @IBInspectable
+    var addShadow: Bool = false{
+        didSet{
+            self.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.25)
+            self.layer.shadowRadius = 10
+            self.layer.shadowOffset = CGSize(width: 0, height: 10)
+            self.layer.shadowOpacity = 1
+            self.clipsToBounds = false
+        }
+    }
+    
 }

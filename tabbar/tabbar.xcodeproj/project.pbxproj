@@ -22,7 +22,7 @@
 		0DEE07AD28F7EB0B0035C23F /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE07AC28F7EB0B0035C23F /* LikeViewController.swift */; };
 		0DEE07AF28F7EB230035C23F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE07AE28F7EB230035C23F /* ProfileViewController.swift */; };
 		0DEE07B128F7EB360035C23F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE07B028F7EB360035C23F /* MessageViewController.swift */; };
-		0DEE07B428F7F0810035C23F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE07B328F7F0810035C23F /* CustomTabBarController.swift */; };
+		0DEE07B428F7F0810035C23F /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE07B328F7F0810035C23F /* CustomTabBar.swift */; };
 		0DEE07B628F822730035C23F /* AlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEE07B528F822730035C23F /* AlertView.storyboard */; };
 		0DEE07B828F822800035C23F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE07B728F822800035C23F /* AlertViewController.swift */; };
 		0DEE07BA28F8249B0035C23F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE07B928F8249B0035C23F /* CustomView.swift */; };
@@ -65,7 +65,7 @@
 		0DEE07AC28F7EB0B0035C23F /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		0DEE07AE28F7EB230035C23F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0DEE07B028F7EB360035C23F /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		0DEE07B328F7F0810035C23F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		0DEE07B328F7F0810035C23F /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		0DEE07B528F822730035C23F /* AlertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertView.storyboard; sourceTree = "<group>"; };
 		0DEE07B728F822800035C23F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		0DEE07B928F8249B0035C23F /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0DEE07B928F8249B0035C23F /* CustomView.swift */,
-				0DEE07B328F7F0810035C23F /* CustomTabBarController.swift */,
+				0DEE07B328F7F0810035C23F /* CustomTabBar.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 				0DEE07B128F7EB360035C23F /* MessageViewController.swift in Sources */,
 				0DEE07B828F822800035C23F /* AlertViewController.swift in Sources */,
 				0DEE077228F7E5580035C23F /* AppDelegate.swift in Sources */,
-				0DEE07B428F7F0810035C23F /* CustomTabBarController.swift in Sources */,
+				0DEE07B428F7F0810035C23F /* CustomTabBar.swift in Sources */,
 				0DEE07BA28F8249B0035C23F /* CustomView.swift in Sources */,
 				0DEE077428F7E5580035C23F /* SceneDelegate.swift in Sources */,
 				0DEE07AF28F7EB230035C23F /* ProfileViewController.swift in Sources */,
