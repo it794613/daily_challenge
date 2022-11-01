@@ -109,6 +109,8 @@ class AlarmViewController : UIViewController{
         self.tempList = self.models.filter{ selectedCategory == .all || $0.type == selectedCategory }
         alarmNumber.text = "\(tempList.count)개의 알림"
         
+        }
+        
         tableView.reloadData()
         
         

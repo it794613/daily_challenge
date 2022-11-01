@@ -8,12 +8,6 @@
 import UIKit
 
 
-
-
-#warning("Todo ")
-// 1.
-
-
 class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
@@ -42,6 +36,11 @@ class TabBarController: UITabBarController {
         alertView.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         alertView.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(alertView, animated: true)
+        DispatchQueue.global().async {
+            DispatchQueue.main.sync {
+                print(1)
+            }
+        }
     }
     
 
