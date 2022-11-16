@@ -7,14 +7,13 @@
 
 import UIKit
 
-#warning("TODO : - ")
 // 1. 전체 클릭 -> 피커뷰 나옴
 // 2. 툴바에 확인 클릭 -> 카테고리 선택됨
 // 3. 선택된 카테고리 라벨 변경
 // 4. 테이블 뷰를 리로드 해서 해당 카테고리 리스트만 보여주기
 // 4-1. 선택된 카테고리에 해당하는 데이터로 변경
 
-class AlarmViewController : UIViewController{
+class AlarmViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -24,7 +23,8 @@ class AlarmViewController : UIViewController{
     @IBOutlet weak var pickView: UIView!
     
     var textForSet : String = ""
- 
+    
+    
     @IBOutlet weak var alarmNumber: UILabel!
     
     // 임시 선택된 카테고리
@@ -32,7 +32,7 @@ class AlarmViewController : UIViewController{
     
     var pickerViewIsHidden : Bool = true
     
-//    let pickerData : [String] = ["전체", "핫딜", "프로필", "디테일"]
+    //    let pickerData : [String] = ["전체", "핫딜", "프로필", "디테일"]
     let pickerData : [Model.Category] = Model.Category.allCases
     
     let models : [Model] = [
@@ -53,6 +53,12 @@ class AlarmViewController : UIViewController{
     // 임시 배열
     var tempList : [Model] = []
     
+    var selectedCategory : Model.Category = .all {
+        didSet {
+            self.tempSelectedCategory = selectedCategory
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,27 +74,26 @@ class AlarmViewController : UIViewController{
         
         self.tempList = self.models
         
-//        view.addSubview(floatingButton)
-//        floatingButton.translatesAutoresizingMaskIntoConstraints = false
-//        floatingButton.layer.masksToBounds = true
-//        NSLayoutConstraint.activate([
-//            floatingButton.widthAnchor.constraint(equalToConstant: 44),
-//            floatingButton.heightAnchor.constraint(equalToConstant: 44),
-//            floatingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -77),
-//            floatingButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-//        ])
-//        view.bringSubviewToFront(floatingButton)
-//
-        // 문제 floating button 이 위로 안올라옴.
-        
-        
-
     }
+    //        view.addSubview(floatingButton)
+    //        floatingButton.translatesAutoresizingMaskIntoConstraints = false
+    //        floatingButton.layer.masksToBounds = true
+    //        NSLayoutConstraint.activate([
+    //            floatingButton.widthAnchor.constraint(equalToConstant: 44),
+    //            floatingButton.heightAnchor.constraint(equalToConstant: 44),
+    //            floatingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -77),
+    //            floatingButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+    //        ])
+    //        view.bringSubviewToFront(floatingButton)
+    //
+    // 문제 floating button 이 위로 안올라옴.
     
-//    @objc func pickerDone(){
-//        pickerView.endEditing(true)
-//
-//    }
+    
+    
+    //    @objc func pickerDone(){
+    //        pickerView.endEditing(true)
+    //
+    //    }
     
     
     
@@ -97,7 +102,7 @@ class AlarmViewController : UIViewController{
         pickerViewIsHidden.toggle()
         pickView.isHidden = pickerViewIsHidden
         pickerView.isHidden = pickerViewIsHidden
-//        labelForSeting.text = self.textForSet
+        //        labelForSeting.text = self.textForSet
         
         
         self.selectedCategory = self.tempSelectedCategory
@@ -105,14 +110,13 @@ class AlarmViewController : UIViewController{
         
         labelForSeting.text = self.selectedCategory.title
         
-        #warning("TODO : - 선택된 카테고리로 테이블뷰 - 데이터소스에 연결되어 있는 리스트를 변경")
+#warning("TODO : - 선택된 카테고리로 테이블뷰 - 데이터소스에 연결되어 있는 리스트를 변경")
         self.tempList = self.models.filter{ selectedCategory == .all || $0.type == selectedCategory }
         alarmNumber.text = "\(tempList.count)개의 알림"
         
-        }
+        
         
         tableView.reloadData()
-        
         
     }
     
@@ -123,8 +127,8 @@ class AlarmViewController : UIViewController{
     }
     
     func scrollToFirstRow() {
-      let indexPath = IndexPath(row: 0, section: 0)
-      self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
     
     @IBAction func pressScrollButton(_ sender: UIButton) {
