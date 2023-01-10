@@ -17,8 +17,10 @@ class ViewController: UIViewController {
     let tableLabel = UILabel()
     
     let disposeBag = DisposeBag()
-    var users: [User]?
-    var userNameList: [String] = []
+//    var users: [User]?
+    var userNameList: [String] = ["최진용", "이상민", "sdf", "sadhfia", "adfjijfd", "ajdfioadf", "adfindf", "wweke", "xjidn", "ninxonwe", "dnfone", "dnfine", "dnfinvb", "dnfowe", "Nidnfowe", "dvni", "nenvinsi", "neifnww", "iieown", "nxp0eifnm", "epppks"]
+    
+    var userOriginal: [String] = ["최진용", "이상민", "sdf", "sadhfia", "adfjijfd", "ajdfioadf", "adfindf", "wweke", "xjidn", "ninxonwe", "dnfone", "dnfine", "dnfinvb", "dnfowe", "Nidnfowe", "dvni", "nenvinsi", "neifnww", "iieown", "nxp0eifnm", "epppks"]
     
     
     
@@ -27,14 +29,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        getAllUsers()
-        getList()
         print(userNameList)
         createUI(titleLable: titleLabel, textField: textField, tableView: tableView, tableLabel: tableLabel)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.cellId)
-//        inputUsers()
+        inputUsers()
         
     }
 
@@ -70,6 +70,9 @@ class ViewController: UIViewController {
         textField.layer.borderWidth = CGFloat(1)
         textField.addLeftPadding()
         textField.addRadious(8)
+        // 인풋값을 무조건 lowercase로
+        textField.autocapitalizationType = .none
+
         
         //테이블뷰 서브 타이틀 추가
         
@@ -99,50 +102,59 @@ class ViewController: UIViewController {
 //MARK: - RxSwift
 extension ViewController {
     
-//    func inputUsers() {
-//        textField.rx.text.orEmpty
-//            .subscribe { userId in
-//                if let searchingId = userId.element {
-//                    self.searchList = self.searchList.filter({ $0.hasPrefix(searchingId) })
-//                    self.tableView.reloadData()
+    func inputUsers() {
+        textField.rx.text.orEmpty
+            .distinctUntilChanged()
+            .subscribe { [unowned self] textInput in
+                if textInput == "" {
+                    userNameList = userOriginal
+                }
+                else {
+                    self.userNameList = self.userOriginal.filter({ $0.hasPrefix(textInput)
+                    })
+                }
+                self.tableView.reloadData()
+            }
+            .disposed(by: disposeBag)
+    }
+
+    
+    
+    
+//MARK: - github api 사용하는부분 선언
+//    func getAllUsers() {
+//        if let url = URL(string: "https://api.github.com/users") {
+//            let session = URLSession(configuration: .default)
+//            let task = session.dataTask(with: url) { data, response, error in
+//                if error != nil {
+//                    print(error!)
+//                    return
+//                }
+//                if let safeData = data {
+//                    self.fetchData(data: safeData)
 //                }
 //            }
-//            .disposed(by: disposeBag)
+//            task.resume()
+//        }
 //    }
-    
-    func getAllUsers() {
-        if let url = URL(string: "https://api.github.com/users") {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { data, response, error in
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                if let safeData = data {
-                    self.fetchData(data: safeData)
-                }
-            }
-            task.resume()
-        }
-    }
-    
-    func fetchData(data: Data) {
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(Users.self, from: data)
-            self.users = decodedData.users
-        } catch {
-            print(error)
-        }
-    }
-    
-    func getList() {
-        if let userList = users {
-            for i in userList {
-                self.userNameList.append(i.login)
-            }
-        }
-    }
+//
+//    func fetchData(data: Data) {
+//        let decoder = JSONDecoder()
+//        do {
+//            let decodedData = try decoder.decode(Users.self, from: data)
+//            self.users = decodedData.users
+//        } catch {
+//            print(error)
+//        }
+//    }
+//
+//    func getList() {
+//        if let userList = users {
+//            for i in userList {
+//                self.userNameList.append(i.login)
+//            }
+//        }
+//    }
     
 
 }
@@ -151,12 +163,12 @@ extension ViewController {
 //MARK: - TableViewDelegate, TableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users?.count ?? 0
+        return userNameList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.cellId, for: indexPath) as! TableViewCell
-        cell.githubUserId.text = users?[indexPath.row].login
+        cell.githubUserId.text = userNameList[indexPath.row]
         return cell
     }
 }
