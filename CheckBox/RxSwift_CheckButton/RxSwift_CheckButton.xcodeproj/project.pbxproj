@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DD3E489296D76780036E404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E488296D76780036E404 /* AppDelegate.swift */; };
+		0DD3E48B296D76780036E404 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E48A296D76780036E404 /* SceneDelegate.swift */; };
+		0DD3E48D296D76780036E404 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E48C296D76780036E404 /* MainViewController.swift */; };
+		0DD3E492296D76790036E404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3E491296D76790036E404 /* Assets.xcassets */; };
+		0DD3E495296D76790036E404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD3E493296D76790036E404 /* LaunchScreen.storyboard */; };
+		0DD3E4A0296D767A0036E404 /* RxSwift_CheckButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E49F296D767A0036E404 /* RxSwift_CheckButtonTests.swift */; };
+		0DD3E4AA296D767A0036E404 /* RxSwift_CheckButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E4A9296D767A0036E404 /* RxSwift_CheckButtonUITests.swift */; };
+		0DD3E4AC296D767A0036E404 /* RxSwift_CheckButtonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E4AB296D767A0036E404 /* RxSwift_CheckButtonUITestsLaunchTests.swift */; };
+		0DD3E4B9296D78370036E404 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E4B8296D78370036E404 /* CheckViewController.swift */; };
+		0DD3E4BC296D78690036E404 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0DD3E4BB296D78690036E404 /* RxCocoa */; };
+		0DD3E4BE296D78690036E404 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0DD3E4BD296D78690036E404 /* RxSwift */; };
+		0DD3E4C1296D80F30036E404 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E4C0296D80F30036E404 /* CustomButton.swift */; };
+		0DD3E4C3296D8D310036E404 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E4C2296D8D310036E404 /* UILabel.swift */; };
+		0DD3E4C5296D8ED10036E404 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E4C4296D8ED10036E404 /* CustomView.swift */; };
+		0DD3E4C7296FF6840036E404 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3E4C6296FF6840036E404 /* UIImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DD3E49C296D767A0036E404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DD3E47D296D76780036E404 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DD3E484296D76780036E404;
+			remoteInfo = RxSwift_CheckButton;
+		};
+		0DD3E4A6296D767A0036E404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DD3E47D296D76780036E404 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DD3E484296D76780036E404;
+			remoteInfo = RxSwift_CheckButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DD3E485296D76780036E404 /* RxSwift_CheckButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwift_CheckButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DD3E488296D76780036E404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0DD3E48A296D76780036E404 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0DD3E48C296D76780036E404 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0DD3E491296D76790036E404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DD3E494296D76790036E404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0DD3E496296D76790036E404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DD3E49B296D767A0036E404 /* RxSwift_CheckButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwift_CheckButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DD3E49F296D767A0036E404 /* RxSwift_CheckButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift_CheckButtonTests.swift; sourceTree = "<group>"; };
+		0DD3E4A5296D767A0036E404 /* RxSwift_CheckButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwift_CheckButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DD3E4A9296D767A0036E404 /* RxSwift_CheckButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift_CheckButtonUITests.swift; sourceTree = "<group>"; };
+		0DD3E4AB296D767A0036E404 /* RxSwift_CheckButtonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift_CheckButtonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DD3E4B8296D78370036E404 /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		0DD3E4C0296D80F30036E404 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0DD3E4C2296D8D310036E404 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		0DD3E4C4296D8ED10036E404 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		0DD3E4C6296FF6840036E404 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DD3E482296D76780036E404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD3E4BE296D78690036E404 /* RxSwift in Frameworks */,
+				0DD3E4BC296D78690036E404 /* RxCocoa in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD3E498296D767A0036E404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD3E4A2296D767A0036E404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DD3E47C296D76770036E404 = {
+			isa = PBXGroup;
+			children = (
+				0DD3E487296D76780036E404 /* RxSwift_CheckButton */,
+				0DD3E49E296D767A0036E404 /* RxSwift_CheckButtonTests */,
+				0DD3E4A8296D767A0036E404 /* RxSwift_CheckButtonUITests */,
+				0DD3E486296D76780036E404 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0DD3E486296D76780036E404 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DD3E485296D76780036E404 /* RxSwift_CheckButton.app */,
+				0DD3E49B296D767A0036E404 /* RxSwift_CheckButtonTests.xctest */,
+				0DD3E4A5296D767A0036E404 /* RxSwift_CheckButtonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DD3E487296D76780036E404 /* RxSwift_CheckButton */ = {
+			isa = PBXGroup;
+			children = (
+				0DD3E488296D76780036E404 /* AppDelegate.swift */,
+				0DD3E48A296D76780036E404 /* SceneDelegate.swift */,
+				0DD3E48C296D76780036E404 /* MainViewController.swift */,
+				0DD3E4B8296D78370036E404 /* CheckViewController.swift */,
+				0DD3E4BF296D80E70036E404 /* Ext+ */,
+				0DD3E491296D76790036E404 /* Assets.xcassets */,
+				0DD3E493296D76790036E404 /* LaunchScreen.storyboard */,
+				0DD3E496296D76790036E404 /* Info.plist */,
+			);
+			path = RxSwift_CheckButton;
+			sourceTree = "<group>";
+		};
+		0DD3E49E296D767A0036E404 /* RxSwift_CheckButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DD3E49F296D767A0036E404 /* RxSwift_CheckButtonTests.swift */,
+			);
+			path = RxSwift_CheckButtonTests;
+			sourceTree = "<group>";
+		};
+		0DD3E4A8296D767A0036E404 /* RxSwift_CheckButtonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0DD3E4A9296D767A0036E404 /* RxSwift_CheckButtonUITests.swift */,
+				0DD3E4AB296D767A0036E404 /* RxSwift_CheckButtonUITestsLaunchTests.swift */,
+			);
+			path = RxSwift_CheckButtonUITests;
+			sourceTree = "<group>";
+		};
+		0DD3E4BF296D80E70036E404 /* Ext+ */ = {
+			isa = PBXGroup;
+			children = (
+				0DD3E4C0296D80F30036E404 /* CustomButton.swift */,
+				0DD3E4C2296D8D310036E404 /* UILabel.swift */,
+				0DD3E4C4296D8ED10036E404 /* CustomView.swift */,
+				0DD3E4C6296FF6840036E404 /* UIImage.swift */,
+			);
+			path = "Ext+";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DD3E484296D76780036E404 /* RxSwift_CheckButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DD3E4AF296D767A0036E404 /* Build configuration list for PBXNativeTarget "RxSwift_CheckButton" */;
+			buildPhases = (
+				0DD3E481296D76780036E404 /* Sources */,
+				0DD3E482296D76780036E404 /* Frameworks */,
+				0DD3E483296D76780036E404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxSwift_CheckButton;
+			packageProductDependencies = (
+				0DD3E4BB296D78690036E404 /* RxCocoa */,
+				0DD3E4BD296D78690036E404 /* RxSwift */,
+			);
+			productName = RxSwift_CheckButton;
+			productReference = 0DD3E485296D76780036E404 /* RxSwift_CheckButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0DD3E49A296D767A0036E404 /* RxSwift_CheckButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DD3E4B2296D767A0036E404 /* Build configuration list for PBXNativeTarget "RxSwift_CheckButtonTests" */;
+			buildPhases = (
+				0DD3E497296D767A0036E404 /* Sources */,
+				0DD3E498296D767A0036E404 /* Frameworks */,
+				0DD3E499296D767A0036E404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DD3E49D296D767A0036E404 /* PBXTargetDependency */,
+			);
+			name = RxSwift_CheckButtonTests;
+			productName = RxSwift_CheckButtonTests;
+			productReference = 0DD3E49B296D767A0036E404 /* RxSwift_CheckButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0DD3E4A4296D767A0036E404 /* RxSwift_CheckButtonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DD3E4B5296D767A0036E404 /* Build configuration list for PBXNativeTarget "RxSwift_CheckButtonUITests" */;
+			buildPhases = (
+				0DD3E4A1296D767A0036E404 /* Sources */,
+				0DD3E4A2296D767A0036E404 /* Frameworks */,
+				0DD3E4A3296D767A0036E404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DD3E4A7296D767A0036E404 /* PBXTargetDependency */,
+			);
+			name = RxSwift_CheckButtonUITests;
+			productName = RxSwift_CheckButtonUITests;
+			productReference = 0DD3E4A5296D767A0036E404 /* RxSwift_CheckButtonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DD3E47D296D76780036E404 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					0DD3E484296D76780036E404 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0DD3E49A296D767A0036E404 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0DD3E484296D76780036E404;
+					};
+					0DD3E4A4296D767A0036E404 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0DD3E484296D76780036E404;
+					};
+				};
+			};
+			buildConfigurationList = 0DD3E480296D76780036E404 /* Build configuration list for PBXProject "RxSwift_CheckButton" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0DD3E47C296D76770036E404;
+			packageReferences = (
+				0DD3E4BA296D78690036E404 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = 0DD3E486296D76780036E404 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DD3E484296D76780036E404 /* RxSwift_CheckButton */,
+				0DD3E49A296D767A0036E404 /* RxSwift_CheckButtonTests */,
+				0DD3E4A4296D767A0036E404 /* RxSwift_CheckButtonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DD3E483296D76780036E404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD3E495296D76790036E404 /* LaunchScreen.storyboard in Resources */,
+				0DD3E492296D76790036E404 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD3E499296D767A0036E404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD3E4A3296D767A0036E404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DD3E481296D76780036E404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD3E48D296D76780036E404 /* MainViewController.swift in Sources */,
+				0DD3E4C7296FF6840036E404 /* UIImage.swift in Sources */,
+				0DD3E4B9296D78370036E404 /* CheckViewController.swift in Sources */,
+				0DD3E489296D76780036E404 /* AppDelegate.swift in Sources */,
+				0DD3E4C5296D8ED10036E404 /* CustomView.swift in Sources */,
+				0DD3E48B296D76780036E404 /* SceneDelegate.swift in Sources */,
+				0DD3E4C3296D8D310036E404 /* UILabel.swift in Sources */,
+				0DD3E4C1296D80F30036E404 /* CustomButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD3E497296D767A0036E404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD3E4A0296D767A0036E404 /* RxSwift_CheckButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DD3E4A1296D767A0036E404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD3E4AA296D767A0036E404 /* RxSwift_CheckButtonUITests.swift in Sources */,
+				0DD3E4AC296D767A0036E404 /* RxSwift_CheckButtonUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DD3E49D296D767A0036E404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DD3E484296D76780036E404 /* RxSwift_CheckButton */;
+			targetProxy = 0DD3E49C296D767A0036E404 /* PBXContainerItemProxy */;
+		};
+		0DD3E4A7296D767A0036E404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DD3E484296D76780036E404 /* RxSwift_CheckButton */;
+			targetProxy = 0DD3E4A6296D767A0036E404 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0DD3E493296D76790036E404 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DD3E494296D76790036E404 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0DD3E4AD296D767A0036E404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0DD3E4AE296D767A0036E404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0DD3E4B0296D767A0036E404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RxSwift_CheckButton/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no2.RxSwift-CheckButton";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0DD3E4B1296D767A0036E404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RxSwift_CheckButton/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no2.RxSwift-CheckButton";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0DD3E4B3296D767A0036E404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no2.RxSwift-CheckButtonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxSwift_CheckButton.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RxSwift_CheckButton";
+			};
+			name = Debug;
+		};
+		0DD3E4B4296D767A0036E404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no2.RxSwift-CheckButtonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxSwift_CheckButton.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RxSwift_CheckButton";
+			};
+			name = Release;
+		};
+		0DD3E4B6296D767A0036E404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no2.RxSwift-CheckButtonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RxSwift_CheckButton;
+			};
+			name = Debug;
+		};
+		0DD3E4B7296D767A0036E404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no2.RxSwift-CheckButtonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RxSwift_CheckButton;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DD3E480296D76780036E404 /* Build configuration list for PBXProject "RxSwift_CheckButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DD3E4AD296D767A0036E404 /* Debug */,
+				0DD3E4AE296D767A0036E404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DD3E4AF296D767A0036E404 /* Build configuration list for PBXNativeTarget "RxSwift_CheckButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DD3E4B0296D767A0036E404 /* Debug */,
+				0DD3E4B1296D767A0036E404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DD3E4B2296D767A0036E404 /* Build configuration list for PBXNativeTarget "RxSwift_CheckButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DD3E4B3296D767A0036E404 /* Debug */,
+				0DD3E4B4296D767A0036E404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DD3E4B5296D767A0036E404 /* Build configuration list for PBXNativeTarget "RxSwift_CheckButtonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DD3E4B6296D767A0036E404 /* Debug */,
+				0DD3E4B7296D767A0036E404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DD3E4BA296D78690036E404 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DD3E4BB296D78690036E404 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DD3E4BA296D78690036E404 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0DD3E4BD296D78690036E404 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DD3E4BA296D78690036E404 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0DD3E47D296D76780036E404 /* Project object */;
+}
