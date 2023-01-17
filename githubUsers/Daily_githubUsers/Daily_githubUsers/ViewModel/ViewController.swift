@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     let disposeBag = DisposeBag()
 //    var users: [User]?
     var userNameList: [String] = ["최진용", "이상민", "sdf", "sadhfia", "adfjijfd", "ajdfioadf", "adfindf", "wweke", "xjidn", "ninxonwe", "dnfone", "dnfine", "dnfinvb", "dnfowe", "Nidnfowe", "dvni", "nenvinsi", "neifnww", "iieown", "nxp0eifnm", "epppks"]
-    
     var userOriginal: [String] = ["최진용", "이상민", "sdf", "sadhfia", "adfjijfd", "ajdfioadf", "adfindf", "wweke", "xjidn", "ninxonwe", "dnfone", "dnfine", "dnfinvb", "dnfowe", "Nidnfowe", "dvni", "nenvinsi", "neifnww", "iieown", "nxp0eifnm", "epppks"]
     
     
@@ -31,10 +30,13 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         print(userNameList)
         createUI(titleLable: titleLabel, textField: textField, tableView: tableView, tableLabel: tableLabel)
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.cellId)
-        inputUsers()
+        inputUser()
+        
+        
         
     }
 
@@ -102,22 +104,36 @@ class ViewController: UIViewController {
 //MARK: - RxSwift
 extension ViewController {
     
-    func inputUsers() {
+//    func inputUsers() {
+//        textField.rx.text.orEmpty
+//            .distinctUntilChanged()
+//            .subscribe { [unowned self] textInput in
+//                if textInput == "" {
+//                    userNameList = userOriginal
+//                }
+//                else {
+//                    self.userNameList = self.userOriginal.filter({ $0.hasPrefix(textInput)
+//                    })
+//                }
+//                self.tableView.reloadData()
+//            }
+//            .disposed(by: disposeBag)
+//    }
+    func updateUI(string: String) {
+        userNameList = userOriginal.filter{ $0.hasPrefix(string) }
+        self.tableView.reloadData()
+    }
+    
+    
+    
+    func inputUser() {
+        
         textField.rx.text.orEmpty
-            .distinctUntilChanged()
-            .subscribe { [unowned self] textInput in
-                if textInput == "" {
-                    userNameList = userOriginal
-                }
-                else {
-                    self.userNameList = self.userOriginal.filter({ $0.hasPrefix(textInput)
-                    })
-                }
-                self.tableView.reloadData()
-            }
+            .debug()
+//            .distinctUntilChanged()
+            .subscribe(onNext: {self.updateUI(string: $0)})
             .disposed(by: disposeBag)
     }
-
     
     
     

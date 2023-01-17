@@ -1,34 +1,31 @@
 //
 //  ViewController.swift
-//  RxSwift_CheckButton
+//  Daily_StarBucks
 //
-//  Created by 최진용 on 2023/01/10.
+//  Created by 최진용 on 2023/01/15.
 //
 
 import UIKit
-import SwiftUI
 
 class MainViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        creatUI()
-        
         // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        creatUI()
     }
     
     @objc func buttonClicked() {
-        let CheckViewController = CheckViewController()
-        CheckViewController.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(CheckViewController, animated: true)
+        let nextView = StarBuckViewController()
+        nextView.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
     
-    
+
+
 }
 
-
-//MARK: - codeBaseUI
 extension MainViewController {
     func creatUI() {
         let button = UIButton()
@@ -43,3 +40,5 @@ extension MainViewController {
         button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
     }
 }
+
+
