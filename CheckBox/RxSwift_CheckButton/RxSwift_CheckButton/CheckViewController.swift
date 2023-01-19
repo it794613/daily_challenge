@@ -30,56 +30,110 @@ class CheckViewController: UIViewController {
     let secondButton = UIButton()
     let nextButton = UIButton()
     
-    var firstButtonState = 0
-    var secondButtonState = 0
+//    var firstButtonState = 0
+//    var secondButtonState = 0
 
+    
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         creatUI()
-        firstButton.addTarget(self, action: #selector(touchFirstButton), for: .touchUpInside)
-        secondButton.addTarget(self, action: #selector(touchSecondButton), for: .touchUpInside)
-        activateNextButton()
         nextButton.addTarget(self, action: #selector(touchNextButton), for: .touchUpInside)
+//        nextButton.isEnabled = false
+//        nextButton.alpha = 0.3
+        
+        
+        let firstButtonState = BehaviorRelay(value: false)
+        let secondButtonState = BehaviorRelay(value: false)
+        
+        
+        
+        var isValid: Observable<Bool> {
+            return Observable.combineLatest(firstButtonState, secondButtonState)
+                .map{ first, second in
+                    return first == true || second == true
+                }
+        }
+        
+        //버튼 이벤트에서 상태로 변환해서 옵저버블로 방출해줌. 이 상태는 firstButtonState로 받음
+        firstButton.rx.tap
+            .scan(false) { (latestState, newState) in !latestState }
+        // 외부 스트림 값을 firstButtonState 라는 옵저버블에 보내주기 위해서 bind
+            .bind(to: firstButtonState)
+            .disposed(by: disposeBag)
+        
+        
+//        firstButtonState.filter{ $0 == true }
+//            .map{ !$0 }
+//            .bind(to: secondButtonState)
+//            .disposed(by: disposeBag)
+//
+//        secondButtonState.filter{ $0 == true }
+//            .map { !$0 }
+//            .bind(to: firstButtonState)
+//            .disposed(by: disposeBag)
+        
+        secondButton.rx.tap
+            .scan(false) { (latestState, newState) in !latestState }
+            .bind(to: secondButtonState)
+            .disposed(by: disposeBag)
+            
+        
+        //받은 state를 통해서 ui를 변경함.
+        firstButtonState.subscribe(onNext: { state in
+            self.changeFirstButtonUI(by: state)
+        }).disposed(by: disposeBag)
+
+
+        secondButtonState.subscribe(onNext: { state in
+            self.changeSecondButtonUI(by: state)
+        }).disposed(by: disposeBag)
+        
+        //두개의 상태를 combineLatest로 확인하여 UI와, 버튼상태를 변경함.
+        isValid.subscribe(onNext: {state in self.changeNextButtonUI(state: state)})
+            .disposed(by: disposeBag)
+        
+        
     }
+    
+    
+    func changeFirstButtonUI(by state: Bool) {
+        if state == true {
+            firstButtonView.backgroundColor = UIColor(cgColor: CGColor(red: 232/255, green: 232/255, blue: 250/255, alpha: 1))
+            secondButtonView.backgroundColor = .white
+        } else {
+            firstButtonView.backgroundColor = UIColor.white
+        }
+    }
+    
+    func changeSecondButtonUI(by state: Bool) {
+        if state == true {
+            secondButtonView.backgroundColor = UIColor(cgColor: CGColor(red: 232/255, green: 232/255, blue: 250/255, alpha: 1))
+            firstButtonView.backgroundColor = .white
+        } else {
+            secondButtonView.backgroundColor = UIColor.white
+        }
+    }
+   
+    func changeNextButtonUI(state: Bool) {
+        nextButton.isEnabled = state
+        if state == true {
+            nextButton.alpha = 1
+        } else {
+            nextButton.alpha = 0.3
+        }
+    }
+    
+    
+    
     
     @objc func touchNextButton() {
         print("activated")
     }
-    
-    
-    @objc func touchFirstButton() {
-        if firstButtonState == 0 {
-            secondButtonState = 0
-            firstButtonView.backgroundColor = UIColor(cgColor: CGColor(red: 232/255, green: 232/255, blue: 250/255, alpha: 1))
-            secondButtonView.backgroundColor = .white
-            firstButtonState = 1
-            activateNextButton()
-        }
-    }
-    
-    @objc func touchSecondButton() {
-        if secondButtonState == 0 {
-            secondButtonState = 1
-            secondButtonView.backgroundColor = UIColor(cgColor: CGColor(red: 232/255, green: 232/255, blue: 250/255, alpha: 1))
-            firstButtonView.backgroundColor = .white
-            firstButtonState = 0
-            activateNextButton()
-        }
-    }
-    
-    func activateNextButton() {
-        if firstButtonState == 0 && secondButtonState == 0 {
-            nextButton.isEnabled = false
-            nextButton.alpha = 0.3
-        } else {
-            nextButton.isEnabled = true
-            nextButton.alpha = 1
-        }
-    }
-    
     
     
 }
