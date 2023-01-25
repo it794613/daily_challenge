@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func buttonClicked() {
-        let nextView = StarBuckViewController()
+        let nextView = StarBucksViewController()
         nextView.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(nextView, animated: true)
     }
