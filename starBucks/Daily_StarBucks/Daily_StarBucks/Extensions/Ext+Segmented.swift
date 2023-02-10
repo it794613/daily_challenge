@@ -33,9 +33,9 @@ extension UISegmentedControl{
         let backgroundLine = UIView(frame: backgroundLineFrame)
         backgroundLine.backgroundColor = UIColor(cgColor: CGColor.gray)
         
-        let underlineWidth: CGFloat = self.bounds.size.width / 2.47
+        let underlineWidth: CGFloat = self.bounds.size.width / 1.79
         let underlineHeight: CGFloat = 2.0
-        let underlineXPosition = CGFloat(selectedSegmentIndex * Int(underlineWidth))
+        let underlineXPosition = CGFloat(selectedSegmentIndex * Int(underlineWidth) - 12)
         let underLineYPosition = self.bounds.size.height + 38
         let underlineFrame = CGRect(x: underlineXPosition, y: underLineYPosition, width: underlineWidth, height: underlineHeight)
         let underline = UIView(frame: underlineFrame)
@@ -49,7 +49,7 @@ extension UISegmentedControl{
         guard let underline = self.viewWithTag(1) else {return}
         let underlineFinalXPosition = (self.bounds.width / CGFloat(self.numberOfSegments)) * CGFloat(selectedSegmentIndex)
         UIView.animate(withDuration: 0.1, animations: {
-            underline.frame.origin.x = underlineFinalXPosition
+            underline.frame.origin.x = underlineFinalXPosition - 12
         })
     }
 }

@@ -20,6 +20,8 @@ class StarBucksViewController: UIViewController {
     let underbarLabel = UILabel()
     let levelButton = UIButton()
     let adventageLabel = UILabel()
+//    let collectionView = UICollectionView()
+    
     
     
     override func viewDidLoad() {
@@ -35,9 +37,17 @@ class StarBucksViewController: UIViewController {
         bottomSegement.addTarget(self, action: #selector(changeBottomIDX), for: .valueChanged)
         
         
-        
+//        collectionView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            collectionView.topAnchor.constraint(equalTo: bottomSegement.bottomAnchor, constant: 25),
+//            collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            collectionView.widthAnchor.constraint(equalToConstant: view.frame.width - 20),
+//            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+//        ])
         
     }
+    
+    
     
     @objc func changeBottomIDX(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -55,9 +65,6 @@ class StarBucksViewController: UIViewController {
             print("0")
         }
     }
-    
-    
-    
     
     @objc func changeIDX(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -80,7 +87,7 @@ class StarBucksViewController: UIViewController {
     }
     
     func addTopSegmentedControl(contentView: UIView) -> UISegmentedControl {
-        let segItems = ["My rewards", "How it works", ""]
+        let segItems = ["My rewards", "How it works"]
         let topSegement = UISegmentedControl(items: segItems)
         topSegement.translatesAutoresizingMaskIntoConstraints = false
         // 클립투 바운스를 통해서 뷰 밖으로 넘어가는 부분은 상관없이 지워버림.
@@ -96,9 +103,9 @@ class StarBucksViewController: UIViewController {
 
         contentView.addSubview(topSegement)
         NSLayoutConstraint.activate([
-            topSegement.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             // 그래서 multiplier을 이용해서 사이즈를 더 키워서 첫번째와 두번째 사이즈를 키워서 사용함.
-            topSegement.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.1),
+            topSegement.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            topSegement.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
             topSegement.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             topSegement.heightAnchor.constraint(equalToConstant: 35)
         ])
@@ -126,7 +133,6 @@ class StarBucksViewController: UIViewController {
             bottomSegment.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.6),
             bottomSegment.heightAnchor.constraint(equalToConstant: 20)
         ])
-        
         
         return bottomSegment
     }
@@ -329,7 +335,6 @@ extension StarBucksViewController {
             adventageLabel.topAnchor.constraint(equalTo: line.bottomAnchor, constant: 30),
             adventageLabel.leadingAnchor.constraint(equalTo: greenLevelLabel.leadingAnchor)
         ])
-        
         
         
         

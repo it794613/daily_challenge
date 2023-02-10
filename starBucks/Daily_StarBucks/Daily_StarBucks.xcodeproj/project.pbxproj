@@ -19,6 +19,8 @@
 		0D837CE4297A66300043B8A5 /* Ext+Segmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D837CE3297A66300043B8A5 /* Ext+Segmented.swift */; };
 		0D9AC270297E75BD00C118ED /* Ext+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC26F297E75BD00C118ED /* Ext+CGColor.swift */; };
 		0D9AC272298186E800C118ED /* Ext+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC271298186E800C118ED /* Ext+UIView.swift */; };
+		0D9AC2742983D1BE00C118ED /* Ext+NSConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC2732983D1BE00C118ED /* Ext+NSConstraint.swift */; };
+		0D9AC2782986657D00C118ED /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC2772986657D00C118ED /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		0D837CE3297A66300043B8A5 /* Ext+Segmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Segmented.swift"; sourceTree = "<group>"; };
 		0D9AC26F297E75BD00C118ED /* Ext+CGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+CGColor.swift"; sourceTree = "<group>"; };
 		0D9AC271298186E800C118ED /* Ext+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIView.swift"; sourceTree = "<group>"; };
+		0D9AC2732983D1BE00C118ED /* Ext+NSConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+NSConstraint.swift"; sourceTree = "<group>"; };
+		0D9AC2772986657D00C118ED /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				0D837CB22973EDD50043B8A5 /* SceneDelegate.swift */,
 				0D837CB42973EDD50043B8A5 /* MainViewController.swift */,
 				0D837CE02973F9690043B8A5 /* StarBucksViewController.swift */,
+				0D9AC2772986657D00C118ED /* CollectionViewCell.swift */,
 				0D837CE2297A66180043B8A5 /* Extensions */,
 				0D837CB92973EDD70043B8A5 /* Assets.xcassets */,
 				0D837CBB2973EDD70043B8A5 /* LaunchScreen.storyboard */,
@@ -140,6 +145,7 @@
 				0D837CE3297A66300043B8A5 /* Ext+Segmented.swift */,
 				0D9AC26F297E75BD00C118ED /* Ext+CGColor.swift */,
 				0D9AC271298186E800C118ED /* Ext+UIView.swift */,
+				0D9AC2732983D1BE00C118ED /* Ext+NSConstraint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,7 +282,9 @@
 			files = (
 				0D837CB52973EDD50043B8A5 /* MainViewController.swift in Sources */,
 				0D837CE12973F9690043B8A5 /* StarBucksViewController.swift in Sources */,
+				0D9AC2782986657D00C118ED /* CollectionViewCell.swift in Sources */,
 				0D837CE4297A66300043B8A5 /* Ext+Segmented.swift in Sources */,
+				0D9AC2742983D1BE00C118ED /* Ext+NSConstraint.swift in Sources */,
 				0D837CB12973EDD50043B8A5 /* AppDelegate.swift in Sources */,
 				0D837CB32973EDD50043B8A5 /* SceneDelegate.swift in Sources */,
 				0D9AC270297E75BD00C118ED /* Ext+CGColor.swift in Sources */,
